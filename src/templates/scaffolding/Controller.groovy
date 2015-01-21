@@ -11,7 +11,7 @@ import org.apache.shiro.SecurityUtils
 class ${className}Controller {
     def grailsApplication
     def excelService
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", confirmDeleteAll: "DELETE"]
     def archivosCargadosService
 
     def index(Integer max) {
@@ -24,6 +24,20 @@ class ${className}Controller {
         [filesCount:files.size(), files: files]
     }
 
+    @Transactional
+    def deleteAll(){
+        session.deleteAll = true
+    }
+    @Transactional
+    def confirmDeleteAll(){
+        if(session.deleteAll){
+            ${className}.executeUpdate('delete from ${className}')        
+            session.deleteAll = false
+            redirect(action: "index")
+        }else {
+            redirect(action: "deleteAll")
+        }
+    }
     def show(${className} ${propertyName}) {
         respond ${propertyName}
     }
@@ -177,6 +191,7 @@ class ${className}Controller {
         }
         redirect action: "pendientes", method: "GET"
     }
+
     @Transactional
     def cancelFile(ArchivosCargados archivo){
         if(archivo.status=="Subido"){

@@ -41,6 +41,11 @@
                                             <i class="fa fa-cloud-upload"></i> <span class="hidden-mobile"><g:message code="default.file.upload" default="Subir formato" /></span>
                                         </g:link>
                                     </li>
+                                    <li>
+                                        <g:link class="btn btn-danger" action="deleteAll">                                        
+                                            <i class="fa fa-trash-o"></i> <span class="hidden-mobile"><g:message code="default.button.delete.label" default="Borrar" /> Todo</span>
+                                        </g:link>
+                                    </li>
                                 </ul>
                                 
                             </div>
