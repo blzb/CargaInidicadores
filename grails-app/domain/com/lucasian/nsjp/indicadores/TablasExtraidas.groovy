@@ -11,25 +11,9 @@ class TablasExtraidas implements Serializable {
 	Long ultimoId
 	Date fechaActualizacion
 
-	int hashCode() {
-		def builder = new HashCodeBuilder()
-		builder.append tabla
-		builder.append indicador
-		builder.append distrito
-		builder.toHashCode()
-	}
-
-	boolean equals(other) {
-		if (other == null) return false
-		def builder = new EqualsBuilder()
-		builder.append tabla, other.tabla
-		builder.append indicador, other.indicador
-		builder.append distrito, other.distrito
-		builder.isEquals()
-	}
-
+	
 	static mapping = {
-		id composite: ["tabla", "indicador", "distrito"]
+		id column: "id_fact"
 		version false
 	}
 
