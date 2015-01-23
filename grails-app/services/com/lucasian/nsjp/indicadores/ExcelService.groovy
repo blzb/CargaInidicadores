@@ -363,7 +363,7 @@ class ExcelService {
         def partesFecha 
         result.each(){ row->
             if(row.actividad == 'REPORTE DE ACTIVIDADES SEMANAL'){
-                def fecha = row.saltilloFemenil
+                String fecha = row.saltilloFemenil
                 partesFecha = fecha.split('/')                
             }
         }
@@ -610,23 +610,23 @@ class ExcelService {
     def loadVulnerables(ArchivosCargados archivo){
         LucasianExcelImporter importer = new LucasianExcelImporter(archivo.path, 'comisionPoblacionVulnerableIndigenas')
         def result = importer.getRows(10)        
-        loadVulnerablesIndigenas(date, result)        
+        loadVulnerablesIndigenas( result)        
         importer = new LucasianExcelImporter(archivo.path, 'comisionPoblacionVulnerableSenectos')
         result = importer.getRows(10)        
-        loadVulnerablesSenectos(date,result)
+        loadVulnerablesSenectos(result)
         importer = new LucasianExcelImporter(archivo.path, 'comisionPoblacionVulnerableExtranjeros')
         result = importer.getRows(10)        
-        loadVulnerablesExtranjeros(date,result)
+        loadVulnerablesExtranjeros(result)
         importer = new LucasianExcelImporter(archivo.path, 'comisionPoblacionVulnerableDiscapacidades')
         result = importer.getRows(10)        
-        loadVulnerablesDiscapacitados(date,result)  
+        loadVulnerablesDiscapacitados(result)  
         importer = new LucasianExcelImporter(archivo.path, 'comisionPoblacionVulnerableInimputables')
         result = importer.getRows(10)        
-        loadVulnerablesInimputables(date,result)
+        loadVulnerablesInimputables(result)
         archivo.status="Cargado"
         archivo.save()        
     }
-    def loadVulnerablesIndigenas(date, result){
+    def loadVulnerablesIndigenas(result){
         def datosPenales = grailsApplication.config.grails.excel.datosPenales
         def tipo_vulnerable = 'INDIGENAS'
         def nextIsCentro = false
@@ -669,7 +669,7 @@ class ExcelService {
             }
         }           
     }
-    def loadVulnerablesSenectos(date, result){
+    def loadVulnerablesSenectos( result){
         def datosPenales = grailsApplication.config.grails.excel.datosPenales
         def tipo_vulnerable = 'SENECTOS'
         def nextIsCentro = false
@@ -712,7 +712,7 @@ class ExcelService {
             }
         }           
     }
-    def loadVulnerablesDiscapacitados(date, result){
+    def loadVulnerablesDiscapacitados( result){
         def datosPenales = grailsApplication.config.grails.excel.datosPenales
         def tipo_vulnerable = 'DISCAPACITADOS'
         def nextIsCentro = false
@@ -760,7 +760,7 @@ class ExcelService {
             }
         }           
     }
-    def loadVulnerablesExtranjeros(date, result){
+    def loadVulnerablesExtranjeros( result){
         def datosPenales = grailsApplication.config.grails.excel.datosPenales
         def tipo_vulnerable = 'EXTRANJEROS'
         def nextIsCentro = false
@@ -803,7 +803,7 @@ class ExcelService {
             }
         }           
     }  
-    def loadVulnerablesInimputables(date, result){
+    def loadVulnerablesInimputables( result){
         def datosPenales = grailsApplication.config.grails.excel.datosPenales
         def tipo_vulnerable = 'ENFERMOS MENTALES'
         def nextIsCentro = false
