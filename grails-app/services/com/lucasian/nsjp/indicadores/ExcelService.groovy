@@ -631,7 +631,7 @@ class ExcelService {
         def tipo_vulnerable = 'INDIGENAS'
         def nextIsCentro = false
         def centro = ""
-        def commonData = []
+        def commonData = [:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)
             if(it.Etnia == 0.0){
@@ -717,7 +717,7 @@ class ExcelService {
         def tipo_vulnerable = 'DISCAPACITADOS'
         def nextIsCentro = false
         def centro = ""
-        def commonData = []
+        def commonData = [:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)
             if(it.Tipo == 0.0){
@@ -765,7 +765,7 @@ class ExcelService {
         def tipo_vulnerable = 'EXTRANJEROS'
         def nextIsCentro = false
         def centro = ""
-        def commonData = []
+        def commonData = [:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)
             if(it.Pais == 0.0){
