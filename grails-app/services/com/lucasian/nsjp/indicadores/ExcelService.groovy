@@ -254,7 +254,7 @@ class ExcelService {
                     distrito: datosPenal.distrito,
                     incapacitados:it.IncapacitadosMujeres?: 0,
                     vacaciones: it.VacacionesMujeres?: 0,
-                    inasistencias: it.AusenciasHombre?: 0,
+                    inasistencias: it.AusenciasMujeres?: 0,
                     descanso: it.DescansoMujeres?: 0,
                     comisionados: it.ComisionadosMujeres?: 0,
                     enCursos: it.CursoMujeres?: 0,
@@ -363,8 +363,8 @@ class ExcelService {
         def partesFecha 
         result.each(){ row->
             if(row.actividad == 'REPORTE DE ACTIVIDADES SEMANAL'){
-                String fecha = row.saltilloFemenil
-                partesFecha = fecha.split('/')                
+                String fecha = row.saltilloFemenil.format("dd/MM/yyyy")				
+				partesFecha = fecha.split('/')                									
             }
         }
         partesFecha
@@ -595,12 +595,12 @@ class ExcelService {
                         mes: month,
                         semana: week
                     ]
-                    (new ComisionProgramasIndividualizados(common+acuna+[tipoPrograma: it.actividad,valor:it.acuna])).save(failOnError: true)
-                    (new ComisionProgramasIndividualizados(common+piedras+[tipoPrograma: it.actividad,valor:it.piedrasNegras])).save(failOnError: true)
-                    (new ComisionProgramasIndividualizados(common+saltilloV+[tipoPrograma: it.actividad,valor:it.saltilloVaronil])).save(failOnError: true)
-                    (new ComisionProgramasIndividualizados(common+saltilloF+[tipoPrograma: it.actividad,valor:it.saltilloFemenil])).save(failOnError: true)
-                    (new ComisionProgramasIndividualizados(common+sanPedro+[tipoPrograma: it.actividad,valor:it.sanPedro])).save(failOnError: true)                    
-                    (new ComisionProgramasIndividualizados(common+torreon+[tipoPrograma: it.actividad,valor:it.torreon])).save(failOnError: true)
+                    (new ComisionProgramasIndividualizados(common+acuna+[tipoPrograma: it.actividad,valor:it.acuna ?: 0])).save(failOnError: true)
+                    (new ComisionProgramasIndividualizados(common+piedras+[tipoPrograma: it.actividad,valor:it.piedrasNegras ?: 0])).save(failOnError: true)
+                    (new ComisionProgramasIndividualizados(common+saltilloV+[tipoPrograma: it.actividad,valor:it.saltilloVaronil ?: 0])).save(failOnError: true)
+                    (new ComisionProgramasIndividualizados(common+saltilloF+[tipoPrograma: it.actividad,valor:it.saltilloFemenil ?: 0])).save(failOnError: true)
+                    (new ComisionProgramasIndividualizados(common+sanPedro+[tipoPrograma: it.actividad,valor:it.sanPedro ?: 0])).save(failOnError: true)                    
+                    (new ComisionProgramasIndividualizados(common+torreon+[tipoPrograma: it.actividad,valor:it.torreon ?: 0])).save(failOnError: true)
                 }
             }
             archivo.status="Cargado"
@@ -727,7 +727,7 @@ class ExcelService {
                 !it.Tipo.contains('TIPO') && !it.Tipo.contains('PADECIMIENTOS') &&
                 !it.Tipo.contains('DE LA VISTA') && !it.Tipo.contains('OIDO')&&
                 !it.Tipo.contains('DEL HABLA') && !it.Tipo.contains('PARA MOVERSE')&&
-                !it.Tipo.contains('DE LA CABEZA') && !it.Tipo.contains('OTROS') && !it.Tipo.contains('Nota')
+                !it.Tipo.contains('DE LA CABEZA') && !it.Tipo.contains('OTROS') && !it.Tipo.contains('NOTA')
                 && !it.Tipo.contains('ENTIDAD FEDERATIVA')&& !it.Tipo.contains('Coahuila') ){                
                 if(it.Tipo == 'CENTRO'){
                     nextIsCentro = true
@@ -813,8 +813,8 @@ class ExcelService {
             if(it.Centro == 0.0){
                 break
             }
-            if(it.Centro != null && !it.Centro.contains('INIMPUTABLES') && !it.Centro.contains('CENTRO DE RECLUSIÓN') ){                
-                if(it.Centro == 'Coahuila'){
+            if(it.Centro != null && !it.Centro.contains('INIMPUTABLES') && !it.Centro.contains('CENTRO DE RECLUSIÓN') ){                			    
+                if(i == 0){
                     fecha = [
                         año: it.InimputablesFederalProcesadosHombres,
                         mes: getMonth(it.EnfermosFederalProceasdosMujeres),

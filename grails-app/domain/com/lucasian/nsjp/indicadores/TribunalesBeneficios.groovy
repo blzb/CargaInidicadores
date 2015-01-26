@@ -28,7 +28,7 @@ class TribunalesBeneficios {
 		sentenciadoGenero nullable: true, maxSize: 200
 		sentenciadoEscolaridad nullable: true, maxSize: 200
 		sentenciadoEdad nullable: true, maxSize: 200
-		sentenciadoOcupacion nullable: true, maxSize: 10
+		sentenciadoOcupacion nullable: true, maxSize: 200
 		nuc nullable: true, maxSize: 200
 		tipoBeneficio nullable: true, maxSize: 200
 		status nullable: true, maxSize: 200

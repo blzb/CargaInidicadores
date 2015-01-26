@@ -18,10 +18,10 @@ environments {
     development {
         dataSource {
                      dbCreate = "update"
-                     username = "indicadores"
-                     password = "indicadores"
+                     username = "indicadores_stg"
+                     password = "indicadores_stg"
                      driverClassName = "com.mysql.jdbc.Driver"
-                     url = "jdbc:mysql://localhost/indicadores_staging"            
+                     url = "jdbc:mysql://localhost:3306/indicadores_staging"            
                      properties { 
                             validationQuery="select 1" 
                             testWhileIdle=true 
@@ -32,10 +32,10 @@ environments {
     test {
         dataSource {
                      dbCreate = "validate"
-                     username = "indicadores"
-                     password = "indicadores"
+                     username = "indicadores_stg"
+                     password = "indicadores_stg"
                      driverClassName = "com.mysql.jdbc.Driver"
-                     url = "jdbc:mysql://192.168.1.11/indicadores_staging"            
+                     url = "jdbc:mysql://localhost:3306/indicadores_staging"            
                      properties { 
                             validationQuery="select 1" 
                             testWhileIdle=true 

@@ -7,6 +7,7 @@
 package com.lucasian.nsjp.indicadores
 
 import org.grails.plugins.excelimport.*
+import java.text.DecimalFormat
 
 /**
  *
@@ -527,8 +528,8 @@ class LucasianExcelImporter extends AbstractExcelImporter {
                   'A':'nuc',
                   'D':'tipoResolucion',
                   'C':'tipoAmparo',
-                  'H':'municipio',
-                  'I':'distrito',
+                  'H':'distrito',
+                  'I':'municipio',
                   'E':'año',
                   'F':'mes',
                   'G':'dia',
@@ -555,16 +556,17 @@ class LucasianExcelImporter extends AbstractExcelImporter {
             sheet:'Hoja1', 
             startRow: 2,
             columnMap:  [
-                  'A':'tipoRecurso',
-                  'C':'ministerio',
-                  'D':'año',
-                  'E':'mes',
-                  'F':'dia',
-                  'H':'municipio',
-                  'G':'distrito',
-                  'I':'claveUnidad',
-                  'J':'nombreUnidad',
-                  'B':'ministerioGrupo'
+				  'A':'nuc',
+                  'B':'tipoRecurso',
+                  'C':'ministerioGrupo',
+				  'D':'ministerio',
+                  'E':'año',
+                  'F':'mes',
+                  'G':'dia',
+                  'H':'distrito',
+                  'I':'municipio',
+                  'J':'claveUnidad',
+                  'K':'nombreUnidad'                  
             ]
         ],
     'procuraduriaJusticiaAlternativa':[
@@ -734,8 +736,8 @@ class LucasianExcelImporter extends AbstractExcelImporter {
                   'R':'mes',
                   'Q':'año',
                   'X':'entreCalle',
-                  'Z':'latitud',
-                  'AA':'longitud',
+                  'AA':'latitud',
+                  'AB':'longitud',
                   'Y':'numero',
                   'W':'calle',
                   'V':'colonia',
@@ -750,16 +752,16 @@ class LucasianExcelImporter extends AbstractExcelImporter {
                   'J':'victimaOcupacion',
                   'L':'tipoDelitoGrupo',
                   'N':'tipoDelitoNombre',
-                  'M':'tipoDelitoSubgrupo',
-                  'A':'codigoPostal',
+                  'M':'tipoDelitoSubgrupo',                  
                   'A':'nuc',
                   'O':'modus',
                   'P':'modalidad',
                   'K':'victimaEstadoCivil',
                   'F':'imputadoEstadoCivil',
-                  'AB':'claveUnidad',
-                  'AC':'nombreUnidad',
-                  'T':'distrito'
+                  'AC':'claveUnidad',
+                  'AD':'nombreUnidad',
+                  'T':'distrito',
+				  'Z':'codigoPostal'
             ]
         ],
     'procuraduriaAtencionVictimas':[
@@ -912,11 +914,15 @@ class LucasianExcelImporter extends AbstractExcelImporter {
             conf.startRow = 0
         }                
         result = excelImportService.columns(workbook, conf)        
+        def pattern = "0"
+        def simple = new DecimalFormat(pattern)
         for(int i = 0 ; i< result.size(); i++){
-            for(def key: result.get(i).keySet()){
-                if(result.get(i).get(key) instanceof String) {
+            for(def key: result.get(i).keySet()){                
+                if(result.get(i).get(key).getClass().toString().contains("String")) {
                     result.get(i).put(key, result.get(i).get(key).toUpperCase())
-                }               
+                }else if(result.get(i).get(key).getClass().toString().contains("Double")) {
+                    result.get(i).put(key,simple.format(result.get(i).get(key)))
+                }
             }
         }
         result

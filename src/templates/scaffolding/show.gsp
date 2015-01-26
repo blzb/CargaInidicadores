@@ -43,7 +43,7 @@
                                 
                             </p>
 			</g:if>
-                        <dl class="dl-horizontal">                                                        
+                        <dl style="padding-left:30px;padding-top:20px;">                                                        
                             <%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 				allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
 				props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && (domainClass.constrainedProperties[it.name] ? domainClass.constrainedProperties[it.name].display : true) }

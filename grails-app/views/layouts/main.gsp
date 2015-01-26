@@ -943,31 +943,7 @@
                 <shiro:hasRole name="Defensoria">
                     <li>
                         <a href="#" class="defensoria"><i class="fa fa-lg fa-fw fa-briefcase"></i> <span class="menu-item-parent">Defensoria Publica</span></a>
-                        <ul>
-                            <shiro:hasPermission permission="defensoriaAtenciones:*">
-                                    <li>
-                                        <a href="#" class="defensoriaAtenciones">
-                                            <span class="menu-item-parent">Atenciones</span>
-                                        </a>
-                                        <ul style="display: none;">
-                                            <li class="">
-                                            <g:link controller="defensoriaAtenciones" action="index">
-                                                Datos Existentes
-                                            </g:link>                                                    
-                                        </li>
-                                        <li class="">
-                                            <g:link controller="defensoriaAtenciones" action="pendientes">
-                                                Carga de Archivos
-                                            </g:link>                                                    
-                                        </li>
-                                        <li class="">
-                                            <g:link controller="defensoriaAtenciones" action="cargados">
-                                                Archivos Cargados
-                                            </g:link>                                                    
-                                        </li>
-                                    </ul>
-                                </li>
-                            </shiro:hasPermission>
+                        <ul>                            
                             <shiro:hasPermission permission="defensoriaAsuntos:*">
                                     <li>
                                         <a href="#" class="defensoriaAsuntos">
