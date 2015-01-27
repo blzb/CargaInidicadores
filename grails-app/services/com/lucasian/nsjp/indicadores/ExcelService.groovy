@@ -643,7 +643,10 @@ class ExcelService {
                 }else{
                     if(nextIsCentro){
                         centro = getStandardName(it.Etnia)
-                        nextIsCentro = false
+                        nextIsCentro = false						
+						print "********************* " + centro
+						if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
+						if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
                         def datosPenal = datosPenales[centro]                                        
                         commonData = [
                             centroPenitenciarioTipo: datosPenal.tipo,
