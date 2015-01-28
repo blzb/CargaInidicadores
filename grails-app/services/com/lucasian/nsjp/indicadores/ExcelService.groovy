@@ -634,7 +634,7 @@ class ExcelService {
         def commonData = [:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)
-            if(it.Etnia == 0.0){
+            if(it.Etnia == "0"){
                 break
             }
             if(it.Etnia != null && !it.Etnia.contains('TOTAL') && !it.Etnia.contains('ETNÍA') && !it.Etnia.contains('POBLACIÓN INDIGENA')&& !it.Etnia.contains('ENTIDAD FEDERATIVA')&& !it.Etnia.contains('Coahuila') ){                
@@ -643,8 +643,7 @@ class ExcelService {
                 }else{
                     if(nextIsCentro){
                         centro = getStandardName(it.Etnia)
-                        nextIsCentro = false						
-						print "********************* " + centro
+                        nextIsCentro = false												
 						if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
 						if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
                         def datosPenal = datosPenales[centro]                                        
@@ -680,7 +679,7 @@ class ExcelService {
         def commonData=[:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)
-            if(it.Rango == 0.0){
+            if(it.Rango == "0"){
                 break
             }
             if(it.Rango != null && !it.Rango.contains('TOTAL') &&!it.Rango.contains('SENECTA')&& !it.Rango.contains('RANGO DE EDAD') && !it.Rango.contains('POBLACIÓN INDIGENA')&& !it.Rango.contains('ENTIDAD FEDERATIVA')&& !it.Rango.contains('Coahuila') ){                
@@ -690,6 +689,8 @@ class ExcelService {
                     if(nextIsCentro){
                         centro = getStandardName(it.Rango)
                         nextIsCentro = false
+						if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
+						if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
                         def datosPenal = datosPenales[centro]                                        
                         commonData = [
                             centroPenitenciarioTipo: datosPenal.tipo,
@@ -723,7 +724,7 @@ class ExcelService {
         def commonData = [:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)
-            if(it.Tipo == 0.0){
+            if(it.Tipo == "0"){
                 break
             }
             if(it.Tipo != null && !it.Tipo.contains('T O T A L') && 
@@ -738,6 +739,8 @@ class ExcelService {
                     if(nextIsCentro){
                         centro = getStandardName(it.Tipo)
                         nextIsCentro = false
+						if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
+						if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
                         def datosPenal = datosPenales[centro]                                        
                         commonData = [
                             centroPenitenciarioTipo: datosPenal.tipo,
@@ -771,7 +774,7 @@ class ExcelService {
         def commonData = [:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)
-            if(it.Pais == 0.0){
+            if(it.Pais == "0"){
                 break
             }
             if(it.Pais != null && !it.Pais.contains('TOTAL') && !it.Pais.contains('PAIS') && !it.Pais.contains('EXTRANJEROS')&& !it.Pais.contains('ENTIDAD FEDERATIVA')&& !it.Pais.contains('Coahuila') ){                
@@ -781,6 +784,8 @@ class ExcelService {
                     if(nextIsCentro){
                         centro = getStandardName(it.Pais)
                         nextIsCentro = false
+						if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
+						if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
                         def datosPenal = datosPenales[centro]                                        
                         commonData = [
                             centroPenitenciarioTipo: datosPenal.tipo,
@@ -813,7 +818,7 @@ class ExcelService {
         def fecha = [:]
         for(int i = 0; i<result.size(); i++){
             def it = result.get(i)            
-            if(it.Centro == 0.0){
+            if(it.Centro == "0"){
                 break
             }
             if(it.Centro != null && !it.Centro.contains('INIMPUTABLES') && !it.Centro.contains('CENTRO DE RECLUSIÓN') ){                			    
@@ -826,6 +831,8 @@ class ExcelService {
                 }else{
                     def centro = getStandardName(it.Centro)
                     def datosPenal = datosPenales[centro]  
+					if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
+					if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
                     def  commonData = [
                         centroPenitenciarioTipo: datosPenal.tipo,
                         centroPenitenciario: datosPenal.nombre,
