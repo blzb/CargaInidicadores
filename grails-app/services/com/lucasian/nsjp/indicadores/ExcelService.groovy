@@ -334,10 +334,10 @@ class ExcelService {
                         commonData+[internoGenero: 'MUJER',clasificacionInternosSubgrupo:'FUERO FEDERAL',clasificacionInternos:'INDICIADOS',numeroInternos:it.FederalIndiciadosMujeres ?: 0]
                     )).save(failOnError: true)
                 (new ComisionInternos(
-                        commonData+[internoGenero: 'MUJER',clasificacionInternosSubgrupo:'MIXTO',clasificacionInternos:'MIXTO',numeroInternos:it.MixtoHombres ?: 0]
+                        commonData+[internoGenero: 'MUJER',clasificacionInternosSubgrupo:'MIXTO',clasificacionInternos:'MIXTO',numeroInternos:it.MixtoMujeres ?: 0]
                     )).save(failOnError: true)
                 (new ComisionInternos(
-                        commonData+[internoGenero: 'HOMBRE',clasificacionInternosSubgrupo:'MIXTO',clasificacionInternos:'MIXTO',numeroInternos:it.MixtoMujeres ?: 0]
+                        commonData+[internoGenero: 'HOMBRE',clasificacionInternosSubgrupo:'MIXTO',clasificacionInternos:'MIXTO',numeroInternos:it.MixtoHombres ?: 0]
                     )).save(failOnError: true)                            
             }
         } 
