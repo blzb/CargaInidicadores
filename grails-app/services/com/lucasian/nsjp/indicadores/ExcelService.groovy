@@ -825,7 +825,7 @@ class ExcelService {
                 if(i == 0){
                     fecha = [
                         año: it.InimputablesFederalProcesadosHombres,
-                        mes: getMonth(it.EnfermosFederalProceasdosMujeres),
+                        mes: getMonth(it.EnfermosFederalProcesadosMujeres),
                         dia: 0
                     ]
                 }else{
