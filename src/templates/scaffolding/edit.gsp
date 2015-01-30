@@ -35,9 +35,9 @@
                                 <div class="col-xs-9 col-sm-5 col-md-5 col-lg-5">
                                     <g:link class="btn btn-success" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
                                 </div>
-                                <div class="col-xs-3 col-sm-7 col-md-7 col-lg-7 text-right">
+                                <!--div class="col-xs-3 col-sm-7 col-md-7 col-lg-7 text-right">
                                     <g:link class="btn btn-success" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
-                                </div>
+                                </div-->
                             </div>
                         </div>
                         

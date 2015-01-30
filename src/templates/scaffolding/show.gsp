@@ -28,9 +28,9 @@
                                     <g:link class="btn btn-success" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
                                 </div>
                                 <%if(className != "ArchivosCargados" && className != "TablasExtraidas" ){ %>
-                                <div class="col-xs-3 col-sm-7 col-md-7 col-lg-7 text-right">
+                                <!--div class="col-xs-3 col-sm-7 col-md-7 col-lg-7 text-right">
                                     <g:link class="btn btn-success" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
-                                </div>
+                                </div-->
                                 <%}%>
                             </div>
                         </div>
@@ -64,7 +64,8 @@
 					<%  } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>
 						<span class="property-value" aria-labelledby="${p.name}-label"><g:formatDate date="\${${propertyName}?.${p.name}}" /></span>
 					<%  } else if (!p.type.isArray()) { %>
-						<span class="property-value" aria-labelledby="${p.name}-label"><g:fieldValue bean="\${${propertyName}}" field="${p.name}"/></span>
+						<span class="property-value" aria-labelledby="${p.name}-label">
+                        \${${propertyName.${p.name}}}
 					<%  } %>
                                         </dd>				
 			<%  } %>                        
@@ -73,7 +74,7 @@
                         <g:form url="[resource:${propertyName}, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
                                         <g:link class="btn btn-default" action="downloadFile" resource="\${${propertyName}}"><g:message code="default.button.download.label" default="Descargar archivo" /></g:link> 
-					<g:link class="btn btn-default" action="edit" resource="\${${propertyName}}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+					<!--g:link class="btn btn-default" action="edit" resource="\${${propertyName}}"><g:message code="default.button.edit.label" default="Edit" /></g:link-->
 					<g:actionSubmit class="btn btn-default" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>				
