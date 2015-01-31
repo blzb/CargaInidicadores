@@ -658,7 +658,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]   
                     }else{
-                        if(tipo_vulnerable){ 
+                        if(commonData?.tipoInternoSubgrupo){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
@@ -705,7 +705,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]                         
                     }else{   
-                        if(tipo_vulnerable){ 
+                        if(commonData?.tipoInternoSubgrupo){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
@@ -757,7 +757,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]   
                     }else{
-                        if(tipo_vulnerable){ 
+                        if(commonData?.tipoInternoSubgrupo){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
@@ -804,7 +804,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]   
                     }else{
-                        if(tipo_vulnerable){ 
+                        if(commonData?.tipoInternoSubgrupo){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
