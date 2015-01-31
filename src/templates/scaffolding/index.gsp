@@ -10,7 +10,7 @@
     <body>
         <div class="jarviswidget jarviswidget-color-darken jarviswidget-sortable" id="wid-id-18" data-widget-colorbutton="false" data-widget-editbutton="false" role="widget">
             <header role="heading">                
-                <h2><strong><g:message code="default.list.label" args="[entityName]" /></strong></h2>				
+                <h2><strong><g:message code="default.list.label" args="[entityName]" /></strong></h2>               
                 <div class="widget-toolbar" role="menu">
                     <g:link class="btn btn-primary"  action="help"><i class="fa fa-question-circle"></i>Ayuda</g:link>
                 </div>
@@ -26,11 +26,11 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <ul class="demo-btns">
-                                    <!--li>
+                                    <li>
                                         <g:link class="btn btn-primary" action="create">                                        
                                             <i class="fa fa-plus"></i> <span class="hidden-mobile"><g:message code="default.new.label" args="[entityName]" /></span>
                                         </g:link>
-                                    </li-->
+                                    </li>
                                     <li>
                                         <g:link class="btn btn-primary" action="downloadFormat">                                        
                                             <i class="fa fa-cloud-download"></i> <span class="hidden-mobile"><g:message code="default.file.download" default="Descargar formato" /></span>
@@ -87,8 +87,10 @@ props.eachWithIndex { p, i ->
                                         <td><g:formatBoolean boolean="\${${propertyName}.${p.name}}" /></td>
                                         <%          } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>
                                         <td><g:formatDate date="\${${propertyName}.${p.name}}" /></td>
+                                        <%         }else if(p.type == java.lang.Integer){%>
+                                        <td><g:formatNumber number="\${${propertyName}.${p.name}}" format="0"/></td>
                                         <%          } else { %>
-                                        <td>\${${propertyName}.${p.name}}</td>
+                                        <td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>
                                         <%  }   }   } %>
                                         <td>
                                         <g:link action="show" id="\${${propertyName}.id}" class="btn btn-primary">Detalle</g:link>
@@ -96,8 +98,8 @@ props.eachWithIndex { p, i ->
                                     </tr>
                                 </g:each>
                             </tbody>
-                        </table>			
-                        <luc:paginate total="\${${propertyName}Count ?: 0}" />			                        
+                        </table>            
+                        <luc:paginate total="\${${propertyName}Count ?: 0}" />                                  
                     </div>
                 </div>
             </div>  
