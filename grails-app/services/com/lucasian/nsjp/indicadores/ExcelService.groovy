@@ -658,6 +658,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]   
                     }else{
+                        if(tipo_vulnerable){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
@@ -666,6 +667,7 @@ class ExcelService {
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'MUJER',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Etnia,tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalSentenciadosMujeres?: 0])).save(failOnError: true)
+                        }
                     }
                 }
             }
@@ -703,6 +705,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]                         
                     }else{   
+                        if(tipo_vulnerable){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
@@ -711,6 +714,7 @@ class ExcelService {
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'MUJER',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Rango,tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalSentenciadosMujeres?: 0])).save(failOnError: true)                        
+                        }
                     }
                 }
             }
@@ -753,6 +757,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]   
                     }else{
+                        if(tipo_vulnerable){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
@@ -761,6 +766,7 @@ class ExcelService {
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'MUJER',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Tipo.toUpperCase(),tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalSentenciadosMujeres?: 0])).save(failOnError: true)
+                        }
                     }
                 }
             }
@@ -798,6 +804,7 @@ class ExcelService {
                             tipoInternoSubgrupo: tipo_vulnerable
                         ]   
                     }else{
+                        if(tipo_vulnerable){ 
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunProcesadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosHombres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'HOMBRE',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosHombres?: 0])).save(failOnError: true)
@@ -806,6 +813,7 @@ class ExcelService {
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO COMUN',numero:it.ComunSentenciadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'MUJER',situacionJuridca:'PROCESADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalProcesadosMujeres?: 0])).save(failOnError: true)
                         (new ComisionPoblacionVulnerable(commonData+[tipoInterno:it.Pais.toUpperCase(),tipoInternoGrupo:'MUJER',situacionJuridca:'SENTENCIADOS',situacionJuridicaGrupo:'FUERO FEDERAL',numero:it.FederalSentenciadosMujeres?: 0])).save(failOnError: true)
+                        }
                     }
                 }
             }
