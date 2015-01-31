@@ -88,7 +88,7 @@ props.eachWithIndex { p, i ->
                                         <%          } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>
                                         <td><g:formatDate date="\${${propertyName}.${p.name}}" /></td>
                                         <%          } else { %>
-                                        <td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>
+                                        <td>\${${propertyName}.${p.name}}</td>
                                         <%  }   }   } %>
                                         <td>
                                         <g:link action="show" id="\${${propertyName}.id}" class="btn btn-primary">Detalle</g:link>

@@ -65,7 +65,7 @@
 						<span class="property-value" aria-labelledby="${p.name}-label"><g:formatDate date="\${${propertyName}?.${p.name}}" /></span>
 					<%  } else if (!p.type.isArray()) { %>
 						<span class="property-value" aria-labelledby="${p.name}-label">
-                        \${${propertyName.${p.name}}}
+                        \${${propertyName}.${p.name}}
 					<%  } %>
                                         </dd>				
 			<%  } %>                        
