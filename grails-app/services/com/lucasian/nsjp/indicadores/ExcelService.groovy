@@ -836,13 +836,11 @@ class ExcelService {
                         mes: getMonth(it.EnfermosFederalProcesadosMujeres),
                         dia: 0
                     ]
-                }else{
-                    println("it.centro"+it.Centro)
+                }else{                    
                     def centro = getStandardName(it.Centro)
-                    def datosPenal = datosPenales[centro]  
-                    println("datosPenales"+datosPenales)
 					if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
 					if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
+                    def datosPenal = datosPenales[centro]                      					
                     def  commonData = [
                         centroPenitenciarioTipo: datosPenal.tipo,
                         centroPenitenciario: datosPenal.nombre,
