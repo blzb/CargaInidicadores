@@ -205,7 +205,7 @@ class LucasianExcelImporter extends AbstractExcelImporter {
                   'N':'InimputablesComunSentenciadosHombres',
                   'O':'InimputablesComunSentenciadosMujeres',
                   'P':'InimputablesFederalProcesadosHombres',
-                  'Q':'InimputablesFederalProceasdosMujeres',
+                  'Q':'InimputablesFederalProcesadosMujeres',
                   'R':'InimputablesFederalSentenciadosHombres',
                   'S':'InimputablesFederalSentenciadosMujeres',
                   'T':'Subtotal'

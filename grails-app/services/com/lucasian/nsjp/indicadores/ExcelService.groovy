@@ -637,7 +637,7 @@ class ExcelService {
             if(it.Etnia == "0"){
                 break
             }
-            if(it.Etnia != null && !it.Etnia.contains('TOTAL') && !it.Etnia.contains('ETNÍA') && !it.Etnia.contains('POBLACIÓN INDIGENA')&& !it.Etnia.contains('ENTIDAD FEDERATIVA')&& !it.Etnia.contains('Coahuila') ){                
+            if(it.Etnia != null && !it.Etnia.contains('TOTAL') && !it.Etnia.contains('ETNÍA') && !it.Etnia.contains('POBLACIÓN INDIGENA')&& !it.Etnia.contains('ENTIDAD FEDERATIVA')&& !it.Etnia.contains('COAHUILA') ){                
                 if(it.Etnia == 'CENTRO'){
                     nextIsCentro = true
                 }else{
@@ -684,7 +684,7 @@ class ExcelService {
             if(it.Rango == "0"){
                 break
             }
-            if(it.Rango != null && !it.Rango.contains('TOTAL') &&!it.Rango.contains('SENECTA')&& !it.Rango.contains('RANGO DE EDAD') && !it.Rango.contains('POBLACIÓN INDIGENA')&& !it.Rango.contains('ENTIDAD FEDERATIVA')&& !it.Rango.contains('Coahuila') ){                
+            if(it.Rango != null && !it.Rango.contains('TOTAL') &&!it.Rango.contains('SENECTA')&& !it.Rango.contains('RANGO DE EDAD') && !it.Rango.contains('POBLACIÓN INDIGENA')&& !it.Rango.contains('ENTIDAD FEDERATIVA')&& !it.Rango.contains('COAHUILA') ){                
                 if(it.Rango == 'CENTRO'){
                     nextIsCentro = true
                 }else{
@@ -736,7 +736,7 @@ class ExcelService {
                 !it.Tipo.contains('DE LA VISTA') && !it.Tipo.contains('OIDO')&&
                 !it.Tipo.contains('DEL HABLA') && !it.Tipo.contains('PARA MOVERSE')&&
                 !it.Tipo.contains('DE LA CABEZA') && !it.Tipo.contains('OTROS') && !it.Tipo.contains('NOTA')
-                && !it.Tipo.contains('ENTIDAD FEDERATIVA')&& !it.Tipo.contains('Coahuila') ){                
+                && !it.Tipo.contains('ENTIDAD FEDERATIVA')&& !it.Tipo.contains('COAHUILA') ){                
                 if(it.Tipo == 'CENTRO'){
                     nextIsCentro = true
                 }else{
@@ -783,7 +783,7 @@ class ExcelService {
             if(it.Pais == "0"){
                 break
             }
-            if(it.Pais != null && !it.Pais.contains('TOTAL') && !it.Pais.contains('PAIS') && !it.Pais.contains('EXTRANJEROS')&& !it.Pais.contains('ENTIDAD FEDERATIVA')&& !it.Pais.contains('Coahuila') ){                
+            if(it.Pais != null && !it.Pais.contains('TOTAL') && !it.Pais.contains('PAIS') && !it.Pais.contains('EXTRANJEROS')&& !it.Pais.contains('ENTIDAD FEDERATIVA')&& !it.Pais.contains('COAHUILA') ){                
                 if(it.Pais == 'CENTRO'){
                     nextIsCentro = true
                 }else{
