@@ -26,11 +26,13 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <ul class="demo-btns">
-                                    <!--li>
+                                    <%if(className == "ConexionSIGI" ){ %>
+                                    <li>
                                         <g:link class="btn btn-primary" action="create">                                        
                                             <i class="fa fa-plus"></i> <span class="hidden-mobile"><g:message code="default.new.label" args="[entityName]" /></span>
                                         </g:link>
-                                    </li-->
+                                    </li>
+                                    <%}%>
                                     <li>
                                         <g:link class="btn btn-primary" action="downloadFormat">                                        
                                             <i class="fa fa-cloud-download"></i> <span class="hidden-mobile"><g:message code="default.file.download" default="Descargar formato" /></span>
