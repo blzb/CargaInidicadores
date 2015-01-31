@@ -28,9 +28,9 @@
                                     <g:link class="btn btn-success" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link>
                                 </div>
                                 <%if(className != "ArchivosCargados" && className != "TablasExtraidas" ){ %>
-                                <div class="col-xs-3 col-sm-7 col-md-7 col-lg-7 text-right">
+                                <!--div class="col-xs-3 col-sm-7 col-md-7 col-lg-7 text-right">
                                     <g:link class="btn btn-success" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
-                                </div>
+                                </div-->
                                 <%}%>
                             </div>
                         </div>
@@ -74,8 +74,7 @@
                         <div class="widget-footer">
                         <g:form url="[resource:${propertyName}, action:'delete']" method="DELETE">
                 <fieldset class="buttons">
-                                        <g:link class="btn btn-default" action="downloadFile" resource="\${${propertyName}}"><g:message code="default.button.download.label" default="Descargar archivo" /></g:link> 
-                    <g:link class="btn btn-default" action="edit" resource="\${${propertyName}}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                                        <g:link class="btn btn-default" action="downloadFile" resource="\${${propertyName}}"><g:message code="default.button.download.label" default="Descargar archivo" /></g:link>                     
                     <g:actionSubmit class="btn btn-default" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
                 </fieldset>
             </g:form>               

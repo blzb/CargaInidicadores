@@ -2,9 +2,9 @@ package com.lucasian.nsjp.indicadores
 
 class ProcuraduriaDelitos {
 
-	Double dia
-	Double mes
-	Double año
+	Integer dia
+	Integer mes
+	Integer año
 	String entreCalle
 	Double latitud
 	Double longitud
