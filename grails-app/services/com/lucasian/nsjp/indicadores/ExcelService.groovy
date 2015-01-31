@@ -829,8 +829,10 @@ class ExcelService {
                         dia: 0
                     ]
                 }else{
+                    println("it.centro"+it.Centro)
                     def centro = getStandardName(it.Centro)
                     def datosPenal = datosPenales[centro]  
+                    println("datosPenales"+datosPenales)
 					if(centro=="CENTRO PENITENCIARIO TORREÓN") centro = "CENTRO PENITENCIARIO TORREON"
 					if(centro=="CENTRO PENITENCIARIO CIUDAD ACUÑA") centro = "CENTRO PENITENCIARIO CIUDAD ACUNA"
                     def  commonData = [
@@ -867,6 +869,7 @@ class ExcelService {
         return meses[mes.toUpperCase()]
     }
     def getStandardName(centro){
+        println("NOMBRE DEL CENTRO RECIBIDO"+centro)
         switch(centro){
         case 'Centro Penitenciario Torreón':
             'TORREON'
