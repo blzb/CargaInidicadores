@@ -42,9 +42,9 @@ class ProcuraduriaAtencionVictimas {
 		victimaEstadoCivil nullable: true, maxSize: 200
 		victimaOcupacion nullable: true, maxSize: 200
 		tipoAtencion nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		municipio nullable: true, maxSize: 200
 		distrito nullable: true, maxSize: 200
 		unidadClave maxSize: 200

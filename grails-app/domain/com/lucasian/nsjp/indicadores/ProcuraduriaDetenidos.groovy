@@ -52,8 +52,8 @@ class ProcuraduriaDetenidos {
 		corporacion nullable: true, maxSize: 200
 		conclusionNombre nullable: true, maxSize: 200
 		añor nullable: true
-		mes nullable: true
-		dia nullable: true
+		mes nullable: false
+		dia nullable: false
 		distrito nullable: true, maxSize: 200
 		unidadClave nullable: true, maxSize: 200
 		unidadNombre nullable: true, maxSize: 200

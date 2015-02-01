@@ -20,10 +20,13 @@
                                 <strong>Se ha presentado un error tecnico. Te pedimos una disculpa.</strong><br><br>
                                 <small>
                                     Guarda esta pagina y comunicate con tu administrador para informarle del error.
-                                </small>
-                                <!--
-                                	<g:renderException exception="${exception}" />
-                                -->
+                                </small>    
+								
+								<br/><br/>
+								<small> 
+								${exception.message?.encodeAsHTML()}			
+								</small> 
+								
                             </p>
                         </div>
 

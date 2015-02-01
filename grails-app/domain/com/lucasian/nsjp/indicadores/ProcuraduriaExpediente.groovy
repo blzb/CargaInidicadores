@@ -31,9 +31,9 @@ class ProcuraduriaExpediente {
 		unidad nullable: true, maxSize: 150
 		municipio nullable: true, maxSize: 200
 		distrito nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		estatus nullable: true, maxSize: 150
 		etapa maxSize: 150
 		nuc maxSize: 200

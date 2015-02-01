@@ -22,9 +22,9 @@ class TribunalesNotificaciones {
 		statusNotificacion nullable: true, maxSize: 200
 		nuc nullable: true, maxSize: 200
 		tipoNotificacion nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		municipio nullable: true, maxSize: 200
 		distrito nullable: true, maxSize: 200
 		numeroExpediente nullable: true, maxSize: 200

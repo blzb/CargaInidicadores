@@ -27,9 +27,9 @@ class TribunalesAudiencias {
 		etapa nullable: true, maxSize: 200
 		tipoAudiencia nullable: true, maxSize: 200
 		statusAudiencia nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		folioAudiencia nullable: true, maxSize: 200
 		participante nullable: true, maxSize: 200
 		rolParticipante nullable: true, maxSize: 200

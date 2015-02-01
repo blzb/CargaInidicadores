@@ -30,9 +30,9 @@ class ComisionCustodios {
 		centroPenitenciario nullable: true, maxSize: 200
 		genero nullable: true, maxSize: 200
 		enServicio nullable: true
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		municipio nullable: true, maxSize: 200
 		distrito nullable: true, maxSize: 200
 	}

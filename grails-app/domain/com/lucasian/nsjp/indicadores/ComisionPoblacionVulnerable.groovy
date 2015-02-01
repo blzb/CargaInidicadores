@@ -29,9 +29,9 @@ class ComisionPoblacionVulnerable {
 		tipoInternoGrupo nullable: true, maxSize: 200
 		tipoInternoSubgrupo nullable: true, maxSize: 200
 		municipio nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		situacionJuridca maxSize: 200
 		situacionJuridicaGrupo maxSize: 200
 	}

@@ -27,9 +27,9 @@ class DefensoriaAtenciones implements Serializable {
 		solicitanteGrupo nullable: true, maxSize: 200
 		solicitanteSubgrupo nullable: true, maxSize: 200
 		solicitanteNombre nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		tipoAtencionGrupo nullable: true, maxSize: 200
 		tipoAtencionSubgrupo nullable: true, maxSize: 200
 		tipoAtencionNombre nullable: true, maxSize: 200

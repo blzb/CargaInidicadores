@@ -80,7 +80,12 @@
                             Recordarme: <g:checkBox name="rememberMe" value="${rememberMe}" />
                         </div-->
                         <br/>
-                        <input type="submit" value="Entrar" class="btn btn-primary" style="width: 100%;"/>                                              
+                        <input type="submit" value="Entrar" class="btn btn-primary" style="width: 100%;"/>
+						<br/>
+						<br/>
+						<center>
+							Powered by <a target="_blank" href="http://www.lucasianmexico.com">Lucasian Labs México</a>
+						</center>
                     </div>
 
                 </div>                

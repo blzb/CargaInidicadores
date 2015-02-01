@@ -32,9 +32,9 @@ class ProcuraduriaActoEquivalente {
 		delito nullable: true, maxSize: 200
 		municipio nullable: true, maxSize: 200
 		distrito nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		delitoModalidad nullable: true, maxSize: 100
 		delitoModus nullable: true, maxSize: 100
 		nuc nullable: true, maxSize: 200

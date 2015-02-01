@@ -27,8 +27,8 @@ class ComisionProgramasIndividualizados {
 		tipoPrograma nullable: true, maxSize: 100
 		tipoProgramaSubgrupo nullable: true, maxSize: 100
 		tipoProgramaGrupo nullable: true, maxSize: 100
-		año nullable: true
-		mes nullable: true
+		año nullable: false
+		mes nullable: false
 		semana nullable: true
 	}
 }

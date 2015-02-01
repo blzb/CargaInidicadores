@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+
+	<title>Procuraduria</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="index/index.css" />
+
+	<script type="text/javascript">
+		var nPlayModes=15;
+		var language="vi_VN";
+	</script>
+	<script type="text/javascript" src="index/languages.js"></script>
+	<script type="text/javascript">
+		function OpenMovie(strUrl)
+		{
+			var isIE = (document.all)? true:false;
+			var nPad = isIE?40:20
+			var nWidth=1362 + nPad;
+			var nHeight=691 +nPad;
+			if(nWidth>screen.availWidth)
+				nWidth=screen.availWidth;
+			if(nHeight>screen.availHeight)
+				nHeight=screen.availHeight;
+			var nLeft=(screen.availWidth-nWidth)/2;
+			var nTop=(screen.availHeight-nHeight)/2;
+			window.open(strUrl, '_blank','top='+nTop+',left='+nLeft+',width='+nWidth+',height='+nHeight+',scrollbars=yes,toolbar=no,status=yes,resizable=yes');
+		}
+
+		var preloadImg01 = new Image();
+		preloadImg01.src = "index/images/demo.png";
+		var preloadImg02 = new Image();
+		preloadImg02.src = "index/images/tutorial.png";
+		var preloadImg03 = new Image();
+		preloadImg03.src = "index/images/practice.png";
+		var preloadImg04 = new Image();
+		preloadImg04.src = "index/images/test.png";
+		var preloadImg05 = new Image();
+		preloadImg05.src = "index/images/bg.png";
+		var preloadImg06 = new Image();
+		preloadImg06.src = "index/images/hover.png";
+	</script>
+</head>
+<body>
+	<div class="top_container">
+			<div class="sub_container">
+				<div class="layout_top">
+					<div class="info">
+						<h1>Procuraduria</h1>
+						<table>
+							<tr>
+								<td><script type="text/javascript">document.write(Lang.Description)</script></td>
+								<td class="left_indent" ></td>
+							</tr>
+							<tr>
+								<td><script type="text/javascript">document.write(Lang.Author)</script></td>
+								<td class="left_indent">Lucasian</td>
+							</tr>
+							<tr>
+								<td><script type="text/javascript">document.write(Lang.Copyright)</script></td>
+								<td class="left_indent"></td>
+							</tr>
+							<tr>
+								<td><script type="text/javascript">document.write(Lang.Homepage)</script></td>
+								<td class="left_indent"><a href="" target="_blank"></a></td>
+							</tr>
+						</table>
+						<div class="static_line">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout_bottom">
+				<script type="text/javascript">
+					<!--
+					var strButtonHTML="";
+					var strBtnMaskOpen = '<div class="operation_btn_mask">';
+					var strBtnMaskClose = '</div>';
+					if ((nPlayModes & 1) == 1)
+					{
+						strButtonHTML += strBtnMaskOpen;
+						strButtonHTML += '<div class="operation_btn" style="background:url(index/images/demo.png) top left no-repeat;" onclick="return OpenMovie(\'demo.html\');" title="' + Lang.DemoIntro + '"><div class="btn_text">'+Lang.Demo+'</div></div>';
+						strButtonHTML += strBtnMaskClose;
+					};
+					if ((nPlayModes & 2) == 2)
+					{
+						strButtonHTML += strBtnMaskOpen;
+						strButtonHTML += '<div class="operation_btn" style="background:url(index/images/tutorial.png) top left no-repeat;" onclick="return OpenMovie(\'tutorial.html\');" title="' + Lang.TutorialIntro + '"><div class="btn_text">'+Lang.Tutorial+'</div></div>';
+						strButtonHTML += strBtnMaskClose;
+					};
+					if ((nPlayModes & 4) == 4)
+					{
+						strButtonHTML += strBtnMaskOpen;
+						strButtonHTML += '<div class="operation_btn" style="background:url(index/images/practice.png) top left no-repeat;" onclick="return OpenMovie(\'practice.html\');" title="' + Lang.PracticeIntro + '"><div class="btn_text">'+Lang.Practice+'</div></div>';
+						strButtonHTML += strBtnMaskClose;
+					};
+					if ((nPlayModes & 8) == 8)
+					{
+						strButtonHTML += strBtnMaskOpen;
+						strButtonHTML += '<div class="operation_btn" style="background:url(index/images/test.png) top left no-repeat;" onclick="return OpenMovie(\'test.html\');" title="' + Lang.TestIntro + '"><div class="btn_text">'+Lang.Test+'</div></div>';
+						strButtonHTML += strBtnMaskClose;
+					};
+					document.write(strButtonHTML);
+					//-->
+				</script>
+			</div>
+	</div>
+</body>
+</html>
+

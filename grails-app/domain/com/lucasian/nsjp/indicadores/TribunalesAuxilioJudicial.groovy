@@ -29,8 +29,8 @@ class TribunalesAuxilioJudicial {
 		distritoDestino nullable: true, maxSize: 200
 		tipoAuxilioGrupo nullable: true, maxSize: 200
 		tipoAuxilioNombre nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 	}
 }

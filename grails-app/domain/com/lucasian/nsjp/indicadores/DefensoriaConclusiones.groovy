@@ -38,8 +38,8 @@ class DefensoriaConclusiones {
 		etapaNombre nullable: true, maxSize: 200
                 nuc nullable: true, maxSize: 200
                 numeroExpediente nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 	}
 }

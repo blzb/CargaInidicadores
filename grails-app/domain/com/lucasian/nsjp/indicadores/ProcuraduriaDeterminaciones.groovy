@@ -52,9 +52,9 @@ class ProcuraduriaDeterminaciones {
 		municipio nullable: true, maxSize: 200
 		distrito nullable: true, maxSize: 200
 		tipoDaterminacionNombre nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		imputadoEstadoCivil nullable: true, maxSize: 200
 		victimaGenero nullable: true, maxSize: 200
 		victimaEdad nullable: true

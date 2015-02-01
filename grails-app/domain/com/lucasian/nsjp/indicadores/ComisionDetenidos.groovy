@@ -42,9 +42,9 @@ class ComisionDetenidos {
 		numero nullable: true, maxSize: 200
 		latitud nullable: true
 		longitud nullable: true
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		distrito nullable: true, maxSize: 200
 	}
 }

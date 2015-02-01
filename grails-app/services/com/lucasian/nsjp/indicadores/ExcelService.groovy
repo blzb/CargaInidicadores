@@ -783,7 +783,7 @@ class ExcelService {
             if(it.Pais == "0"){
                 break
             }
-            if(it.Pais != null && !it.Pais.contains('TOTAL') && !it.Pais.contains('PAIS') && !it.Pais.contains('EXTRANJEROS')&& !it.Pais.contains('ENTIDAD FEDERATIVA')&& !it.Pais.contains('COAHUILA') ){                
+            if(it.Pais != null && !it.Pais.contains('TOTAL') && !it.Pais.contains('PAIS') && !it.Pais.contains('EXTRANJEROS')&& !it.Pais.contains('ENTIDAD FEDERATIVA')&& !it.Pais.contains('COAHUILA') && !it.Pais.contains('NOTA')){                
                 if(it.Pais == 'CENTRO'){
                     nextIsCentro = true
                 }else{

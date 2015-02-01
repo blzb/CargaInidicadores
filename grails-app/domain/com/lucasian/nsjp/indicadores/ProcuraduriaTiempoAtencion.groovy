@@ -24,9 +24,9 @@ class ProcuraduriaTiempoAtencion {
 		municipio nullable: true, maxSize: 200
 		distrito nullable: true, maxSize: 200
 		unidadProcuraduria nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		tiempoSegundos nullable: true
 		claveUnidad nullable: true, maxSize: 200
 	}

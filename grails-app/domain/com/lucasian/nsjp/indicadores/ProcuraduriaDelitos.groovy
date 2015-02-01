@@ -41,9 +41,9 @@ class ProcuraduriaDelitos {
 	}
 
 	static constraints = {
-		dia nullable: true
-		mes nullable: true
-		año nullable: true
+		dia nullable: false
+		mes nullable: false
+		año nullable: false
 		entreCalle nullable: true, maxSize: 150
 		latitud nullable: true, scale: 7
 		longitud nullable: true, scale: 7

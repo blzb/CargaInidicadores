@@ -36,9 +36,9 @@ class DefensoriaGestiones {
 		tipoGestionGrupo nullable: true, maxSize: 200
 		tipoGestionSubgrupo nullable: true, maxSize: 200
 		tipoGestionNombre nullable: true, maxSize: 200
-		año nullable: true
-		mes nullable: true
-		dia nullable: true
+		año nullable: false
+		mes nullable: false
+		dia nullable: false
 		municipio nullable: true, maxSize: 200
 	}
 }
